@@ -9,7 +9,7 @@ ENABLE_CONTRIB=$(<contrib.enabled)
 
 pip install "$BUILD_DEPENDS"
 
-yum install gtk2-devel
+yum -y install gtk2-devel
 
 echo 'Install cmake 3.9.0'
 
