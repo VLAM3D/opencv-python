@@ -9,8 +9,6 @@ ENABLE_CONTRIB=$(<contrib.enabled)
 
 pip install "$BUILD_DEPENDS"
 
-yum -y install qt4-devel
-
 echo 'Install cmake 3.9.0'
 
 wget --no-check-certificate https://cmake.org/files/v3.9/cmake-3.9.0.tar.gz
