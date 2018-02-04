@@ -4,7 +4,7 @@ import subprocess
 
 opencv_version = ""
 # dig out the version from OpenCV sources
-version_file_path = "opencv/modules/core/include/opencv2/core/version.hpp"
+version_file_path = "/opencv-3.4.0/modules/core/include/opencv2/core/version.hpp"
 
 with open(version_file_path, 'r') as f:
     for line in f:
