@@ -74,16 +74,21 @@ class EmptyListWithLength(list):
     def __len__(self):
         return 1
 
-
+# The original file is here: https://github.com/skvark/opencv-python
+# Original author and maintainer Olli-Pekka Heinisuo
+# Below the package was modified for build automation in a dockerfile
+# and the resulting wheel file are not meant to be uploaded to Pypi or any other 
+# package repository, the package will be used by inside docker containers and only 
+# exist inside docker images 
 setup(name=package_name,
       version=opencv_version,
-      url='https://github.com/skvark/opencv-python',
+      url='https://github.com/VLAM3D/opencv-python',
       license='MIT',
       description='Wrapper package for OpenCV python bindings.',
       long_description=long_description,
       packages=find_packages(),
       package_data=package_data,
-      maintainer="Olli-Pekka Heinisuo",
+      maintainer="Mathieu Lamarre",
       include_package_data=True,
       ext_modules=EmptyListWithLength(),
       install_requires="numpy>=%s" % numpy_version,
