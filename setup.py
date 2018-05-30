@@ -38,11 +38,6 @@ else:
     with io.open('README.rst', encoding="utf-8") as f:
         long_description = f.read()
 
-# Get required numpy version
-for package in pip.get_installed_distributions():
-    if package.key == "numpy":
-        numpy_version = package.version
-
 if os.name == 'posix':
     package_data['cv2'] = ['*.so']
 else:
@@ -85,7 +80,7 @@ setup(name=package_name,
       maintainer="Olli-Pekka Heinisuo",
       include_package_data=True,
       ext_modules=EmptyListWithLength(),
-      install_requires="numpy>=%s" % numpy_version,
+      install_requires="numpy>=1.14",
       classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
