@@ -10,7 +10,7 @@ from cv_version import opencv_version
 
 contrib_build = False
 package_name = "opencv-python"
-numpy_version = ""
+numpy_version = "1.14" 
 long_description = ""
 package_data = {}
 
@@ -37,11 +37,6 @@ if contrib_build:
 else:
     with io.open('README.rst', encoding="utf-8") as f:
         long_description = f.read()
-
-# Get required numpy version
-for package in pip.get_installed_distributions():
-    if package.key == "numpy":
-        numpy_version = package.version
 
 if os.name == 'posix':
     package_data['cv2'] = ['*.so']
