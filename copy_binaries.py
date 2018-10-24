@@ -21,7 +21,7 @@ def copy_binaries_main(opencvbuildpath):
     if sys.version_info[0] == 2:
         assert_copy(os.path.join(opencvbuildpath, 'lib', 'Release', 'cv2.pyd'), os.path.join(dst_folder, 'cv2.pyd'))
     else:
-        assert_copy(os.path.join(opencvbuildpath, 'lib', 'python3', 'Release', 'cv2.cp35-win_amd64.pyd'), os.path.join(dst_folder, 'cv2.pyd'))
+        assert_copy(os.path.join(opencvbuildpath, 'lib', 'python3', 'Release', 'cv2.cp36-win_amd64.pyd'), os.path.join(dst_folder, 'cv2.pyd'))
       
     dlls = glob.glob(os.path.join(opencvbuildpath, 'bin', 'Release', 'opencv_*.dll'))
     
